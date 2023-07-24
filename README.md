@@ -42,5 +42,6 @@
 5. To search for books in the database, select the “Search for Books” option and enter your search criteria.
 6. Enter 0 to exit program
 
-## That's all for now!
+## Get my GitHub repository below:
+[myGitHubRepo](https://github.com/Kenton-Enoid/Read-Book)
     
