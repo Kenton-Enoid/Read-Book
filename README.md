@@ -3,13 +3,13 @@
 ## This is a Python program that works with SQL Database specifically for a bookstore. The program should allow the clerk to enter data about new books into the database, update book information, delete books from the database and search to find the availability of books in the database.
 
 ## Table of Contents
-1. [General Info](#general-info)
-2. [Tools](#tool)
-3. [Installation](#installation)
-4. [Usage](#usage)
+1. **General Info**
+2. **Tools**
+3. **Installation**
+4. **Usage**
 
 ## General Info
-### SQL is a standard language for storing, manipulating and retrieving data in databases. Using one of the most user-friendly language can make it easier for you to work around SQL data as it can store large amounts of data.
+##### SQL is a standard language for storing, manipulating and retrieving data in databases. Using one of the most user-friendly language can make it easier for you to work around SQL data as it can store large amounts of data.
 
 ## Tools
 1. Visual Studio Code (version 1.78.0)
@@ -34,9 +34,9 @@
 ## Usage
 ### To use the program, follow these steps:
 1. Open the .py file and run the program, you should be able to see the data as output and the options to select.
-![Alt text](https://github.com/Kenton-Enoid/Read-Book/blob/master/images/Data%20%26%20Menu.png)
+   ![Alt text](https://github.com/Kenton-Enoid/Read-Book/blob/master/images/Data%20%26%20Menu.png)
 2. To enter data about new books into the database, select the “Enter New Book” option and follow the prompts:
-   ![Alt text](https://github.com/Kenton-Enoid/Read-Book/blob/master/images/connection%20screenshot.png)
+   ![Alt text](https://github.com/Kenton-Enoid/Read-Book/blob/master/images/UsageAdd.png)
 3. To update book information, select the “Update Book Information” option and follow the prompts.
 4. To delete books from the database, select the “Delete Book” option and follow the prompts.
 5. To search for books in the database, select the “Search for Books” option and enter your search criteria.
