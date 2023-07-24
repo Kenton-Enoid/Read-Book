@@ -29,7 +29,7 @@
     * First we need to "import sqlite3 library into the program code.
     * Second, we need to create a new database and open a database connection to allow sqlite3 to work with it. Call sqlite3.connect() to create a connection to the database
       "ebookstore.db" in the current working directory, implicitly creating it if it does not exist:
-    ![Alt text](image_URL)
+    ![Alt text](https://github.com/Kenton-Enoid/Read-Book/blob/master/images/connection%20screenshot.png)
 
 ## Usage
 ### To use the program, follow these steps:
