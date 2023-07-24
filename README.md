@@ -1,5 +1,6 @@
 # Book-Store
 
+[View on GitHub](https://github.com/Kenton-Enoid/Read-Book)
 ## This is a Python program that works with SQL Database specifically for a bookstore. The program should allow the clerk to enter data about new books into the database, update book information, delete books from the database and search to find the availability of books in the database.
 
 ## Table of Contents
@@ -40,8 +41,6 @@
 3. To update book information, select the “Update Book Information” option and follow the prompts.
 4. To delete books from the database, select the “Delete Book” option and follow the prompts.
 5. To search for books in the database, select the “Search for Books” option and enter your search criteria.
-6. Enter 0 to exit program
+6. Enter 0 to exit program.
 
-## Get my GitHub repository below:
-[myGitHubRepo](https://github.com/Kenton-Enoid/Read-Book)
-    
+## That's all for now!
