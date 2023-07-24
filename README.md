@@ -34,8 +34,9 @@
 ## Usage
 ### To use the program, follow these steps:
 1. Open the .py file and run the program, you should be able to see the data as output and the options to select.
-![Alt text](image_URL)
-2. To enter data about new books into the database, select the “Enter New Book” option and follow the prompts.
+![Alt text](https://github.com/Kenton-Enoid/Read-Book/blob/master/images/Data%20%26%20Menu.png)
+2. To enter data about new books into the database, select the “Enter New Book” option and follow the prompts:
+   ![Alt text](https://github.com/Kenton-Enoid/Read-Book/blob/master/images/connection%20screenshot.png)
 3. To update book information, select the “Update Book Information” option and follow the prompts.
 4. To delete books from the database, select the “Delete Book” option and follow the prompts.
 5. To search for books in the database, select the “Search for Books” option and enter your search criteria.
