@@ -1,21 +1,24 @@
 import sqlite3
 
-# Define a function to create a database and table and insert initial data
 def connection():
-    # Connect to the ebookstore.db SQLite database
+    """
+    Define a function to create a database and table and insert initial data
+    Connect to the ebookstore.db SQLite database
+    Create a cursor object
+    Execute a CREATE TABLE statement to create the books table if it doesn't already exist
+    Check if the books table is empty
+    If the books table is empty, insert the initial data into the table
+    Commit the changes to the database and close the connection
+    """
     db = sqlite3.connect('ebookstore.db')
     
-    # Create a cursor object
     cursor = db.cursor()
     
-    # Execute a CREATE TABLE statement to create the books table if it doesn't already exist
     cursor.execute('''CREATE TABLE IF NOT EXISTS books (id INTEGER PRIMARY KEY, Title TEXT, Author TEXT, Qty INTEGER)''')
     
-    # Check if the books table is empty
     cursor.execute('''SELECT COUNT(*) FROM books''')
     count = cursor.fetchone()[0]
     if count == 0:
-        # If the books table is empty, insert the initial data into the table
         books = [(3001, "A Tale of Two Cities", "Charles Dickens", 30),
                  (3002, "Harry Potter and the Philosopher's Stone", "J.K. Rowling", 40),
                  (3003, "The Lion, the Witch and the Wardrobe", "C.S. Lewis", 25),
@@ -25,52 +28,62 @@ def connection():
         for book in books:
             cursor.execute('''INSERT INTO books(id, Title, Author, Qty) VALUES(?,?,?,?)''', book)
     
-    # Commit the changes to the database and close the connection
     db.commit()
     db.close()
 
 
-# Define a function to insert a new book into the books table
-# Connect to the ebookstore.db SQLite database
-# Create a cursor object
-# Execute an INSERT statement to insert a new row into the books table with the specified values
-# Commit the changes to the database and close the connection
 def enter_book(id, Title, Author, Qty):
+    """
+    Define a function to insert a new book into the books table
+    Connect to the ebookstore.db SQLite database
+    Create a cursor object
+    Execute an INSERT statement to insert a new row into the books table with the specified values
+    Commit the changes to the database and close the connection
+    """
     db = sqlite3.connect('ebookstore.db')
     cursor = db.cursor()
     cursor.execute('''INSERT INTO books(id, Title, Author, Qty) VALUES(?,?,?,?)''', (id, Title, Author, Qty))
     db.commit()
     db.close()
 
-# Define a function to update an existing book in the books table
-# Connect to the ebookstore.db SQLite database
-# Create a cursor object
-# Execute an UPDATE statement to update the row in the books table with the specified id with the new values
-# Commit the changes to the database and close the connection
+
 def update_book(id, Title, Author, Qty):
+    """
+    Define a function to update an existing book in the books table
+    Connect to the ebookstore.db SQLite database
+    Create a cursor object
+    Execute an UPDATE statement to update the row in the books table with the specified id with the new values
+    Commit the changes to the database and close the connection
+    """
     db = sqlite3.connect('ebookstore.db')
     cursor = db.cursor()
     cursor.execute('''UPDATE books SET Title=?, Author=?, Qty=? WHERE id=?''', (Title, Author, Qty, id))
     db.commit()
     db.close()
 
-# Define a function to delete an existing book from the books table
-# Connect to the ebookstore.db SQLite database
-# Create a cursor object
-# Execute a DELETE statement to delete the row from the books table with the specified id
-# Commit the changes to the database and close the connection
+
 def delete_book(id):
+    """
+    Define a function to delete an existing book from the books table
+    Connect to the ebookstore.db SQLite database
+    Create a cursor object
+    Execute a DELETE statement to delete the row from the books table with the specified id
+    Commit the changes to the database and close the connection
+    """
     db = sqlite3.connect('ebookstore.db')
     cursor = db.cursor()
     cursor.execute('''DELETE FROM books WHERE id=?''', (id,))
     db.commit()
     db.close()        
 
-# Define a function to search for books in the books table by title and author
-# Connect to the ebookstore.db SQLite database and create a cursor object
-# Execute a SELECT statement to search for rows in the books table that match the specified
-# title and author
-def search_book(Title="", Author=""):  
+
+def search_book(Title="", Author=""):
+    """
+    Define a function to search for books in the books table by title and author
+    Connect to the ebookstore.db SQLite database and create a cursor object
+    Execute a SELECT statement to search for rows in the books table that match the specified
+    title and author
+    """ 
     db = sqlite3.connect('ebookstore.db')
     cursor = db.cursor()
     cursor.execute('''SELECT * FROM books
@@ -79,12 +92,15 @@ def search_book(Title="", Author=""):
     db.close()
     return rows
 
-# Define a function that displays all books in store 
-# This function connects to the ebookstore.db SQLite database, creates a cursor object,
-# and executes a SELECT statement to retrieve all rows from the books table. It then fetches
-# all rows returned by the SELECT statement, loops through each row, and prints it out.
-# Finally, it closes the database connection.
+
 def display_books():
+    """
+    Define a function that displays all books in store 
+    This function connects to the ebookstore.db SQLite database, creates a cursor object,
+    and executes a SELECT statement to retrieve all rows from the books table. It then fetches
+    all rows returned by the SELECT statement, loops through each row, and prints it out.
+    Finally, it closes the database connection.
+    """
     db = sqlite3.connect('ebookstore.db')
     cursor = db.cursor()
     cursor.execute('''SELECT * FROM books''')
@@ -94,8 +110,11 @@ def display_books():
     
     db.close()
 
-# Define a function to display a menu of options to the user
+
 def menu():
+    """
+    Define a function to display a menu of options to the user
+    """
     display_books()
 
     print("ebook store menu below:")
@@ -105,12 +124,15 @@ def menu():
     print("4. Search book")
     print("0. Exit")
 
-# Define the main function of the program
-# Then call the connection function to create the database and table and insert initial data
+
 def main():
+    """
+    Define the main function of the program
+    Then call the connection function to create the database and table and insert initial data
+    Enter an infinite loop to display the menu and prompt the user for input
+    """
     connection()
     
-    # Enter an infinite loop to display the menu and prompt the user for input
     while True:
         menu()
         choice = input("Enter your choice: ")
