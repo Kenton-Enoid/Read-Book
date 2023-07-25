@@ -8,6 +8,7 @@
 2. **Tools**
 3. **Installation**
 4. **Usage**
+5. **Credits**
 
 ## General Info
 ##### SQL is a standard language for storing, manipulating and retrieving data in databases. Using one of the most user-friendly language can make it easier for you to work around SQL data as it can store large amounts of data.
@@ -42,5 +43,8 @@
 4. To delete books from the database, select the “Delete Book” option and follow the prompts.
 5. To search for books in the database, select the “Search for Books” option and enter your search criteria.
 6. Enter 0 to exit program.
+
+## Credits
+[HyperionDev](https://www.hyperiondev.com/)
 
 ## That's all for now!
