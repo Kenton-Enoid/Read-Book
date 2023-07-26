@@ -117,12 +117,10 @@ def menu():
     """
     display_books()
 
+    menu_options = ["Enter book", "Update book", "Delete book", "Search book", "Exit"]
     print("ebook store menu below:")
-    print("1. Enter book")
-    print("2. Update book")
-    print("3. Delete book")
-    print("4. Search book")
-    print("0. Exit")
+    for i, option in enumerate(menu_options):
+        print(f"{i + 1}. {option}")
 
 
 def main():
